@@ -1,12 +1,22 @@
 <ion-header>
   <ion-navbar color="primary">
     <ion-title text-center>
-      Love Calculator
+      <ion-icon name="heart" class="head-heart" color="danger"></ion-icon>Love Calculator<ion-icon name="heart" color="danger" class="head-heart"></ion-icon>
     </ion-title>
   </ion-navbar>
 </ion-header>
 
+
 <ion-content padding>
+    <ion-card>
+        
+          
+        
+          <ion-card-content  class="manual">
+              Chcesz sprawdzić czy ty i twój partner pasujecie do siebie, wystarczy że podasz swoje imię i twojego partnera/partnerki:
+          </ion-card-content>
+        
+        </ion-card>
   <ion-list>
   
     <ion-item>
@@ -22,17 +32,27 @@
   </ion-list>
   <ion-card text-center>
     <ion-card-header > 
-     {{name1 || '???'}}  <ion-icon name="heart" color="danger"></ion-icon> {{name2 || '???'}}
+     {{name1 || '???'}}  <ion-icon name="heart" color="danger" class="names"></ion-icon> {{name2 || '???'}}
     </ion-card-header>
     <ion-card-content class="score">
      {{score}}%
     </ion-card-content>
   </ion-card>
-  <ion-list>
-    <ion-item>
-      <ion-icon name="leaf" item-start></ion-icon>
-        Herbology
-      
-    </ion-item>
-  </ion-list>
+  <ion-card>
+    
+      <ion-card-header class="manual">
+       <b>Odczytaj swój wynik:</b> 
+      </ion-card-header>
+    
+      <ion-card-content class="manual">
+        <ul type="square" >
+          <li>Poniżej 50% - Musicie jeszcze się postarać </li>
+          <li>50%-75% - Wszystko idzie w dobrym kierunku</li>
+          <li>75%-90% - Jesteście sobie przeznaczeni</li>
+          <li>90%-100% - Para na całe życie</li>
+        </ul>
+      </ion-card-content>
+    
+    </ion-card>
+  
 </ion-content>
